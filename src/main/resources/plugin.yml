@@ -1,0 +1,4 @@
+name: Blood
+version: ${project.version}
+main: com.github.styuchan1005.blood.blood.Blood
+authors: [syuchan1005]
