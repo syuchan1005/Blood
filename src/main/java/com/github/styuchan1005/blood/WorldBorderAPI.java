@@ -1,4 +1,4 @@
-package com.github.styuchan1005.blood.blood;
+package com.github.styuchan1005.blood;
 
 import net.minecraft.server.v1_10_R1.PacketPlayOutWorldBorder;
 import net.minecraft.server.v1_10_R1.WorldBorder;
