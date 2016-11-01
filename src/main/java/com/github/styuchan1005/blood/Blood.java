@@ -21,13 +21,14 @@ public class Blood extends JavaPlugin implements Listener {
 		this.getServer().getPluginManager().registerEvents(this, this);
 		worldBorder = Bukkit.getWorld("world").getWorldBorder();
 		Bukkit.getScheduler().runTaskTimer(instance, () -> {
-			if (worldBorder.getSize() -2 > 0) worldBorder.setSize(worldBorder.getSize() + 2);
-		}, 12000, 12000);
+			if (Bukkit.getOnlinePlayers().size() > 0) worldBorder.setSize(worldBorder.getSize() + 2);
+		}, 36000, 36000);
 	}
 
 	@EventHandler
 	public void onPlayerDeath(PlayerDeathEvent event) {
-		worldBorder.setSize(worldBorder.getSize() - 2);
+		double size = worldBorder.getSize() - 2;
+		worldBorder.setSize(size > 0 ? size : 1);
 	}
 
 	@EventHandler
